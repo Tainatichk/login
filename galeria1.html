@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria de Fotos</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="">
+</head>
+<style>
+    /* Estilos adicionais podem ser colocados aqui */
+body {
+    background-image: url('Captura de tela 2024-07-22 182307.png'); /* Caminho para sua imagem */
+    font-family: Arial, sans-serif;
+    background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Garante que a imagem ocupe toda a altura da tela */
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 35%;
+  max-height: 90%;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #706f6f;
+  font-size: 35px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+    width: 17%;
+    padding: 10px;
+    background-color: #bd87b6;
+    border: none;
+    color: rgb(27, 26, 26);
+    border-radius: 4px;
+    cursor: pointer;
+}
+</style>
+<body>
+
+<div class="container mt-5">
+  <h1 class="text-center mb-4">Galeria de Fotos</h1>
+  <button id="prev-page"><a href="index.html" id="stored-pdf">VOLTAR</a></button>
+  <p></p>
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <img src="Captura de tela 2024-07-22 181907.png" class="img-fluid img-thumbnail" alt="Foto 1" onclick="openModal('Captura de tela 2024-07-22 181907.png')" style="cursor: pointer;">
+    </div>
+    <div class="col-md-4 mb-4">
+      <img src="Captura de tela 2024-07-22 181920.png" class="img-fluid img-thumbnail" alt="Foto 2" onclick="openModal('Captura de tela 2024-07-22 181920.png')" style="cursor: pointer;">
+    </div>
+    <div class="col-md-4 mb-4">
+      <img src="Captura de tela 2024-07-22 182021.png" class="img-fluid img-thumbnail" alt="Foto 3" onclick="openModal('Captura de tela 2024-07-22 182021.png')" style="cursor: pointer;">
+    </div>
+    <div class="col-md-4 mb-4">
+        <img src="Captura de tela 2024-07-22 182044.png" class="img-fluid img-thumbnail" alt="Foto 3" onclick="openModal('Captura de tela 2024-07-22 182044.png')" style="cursor: pointer;">
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="Captura de tela 2024-07-22 182114.png" class="img-fluid img-thumbnail" alt="Foto 3" onclick="openModal('Captura de tela 2024-07-22 182114.png')" style="cursor: pointer;">
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="Captura de tela 2024-07-22 182208.png" class="img-fluid img-thumbnail" alt="Foto 3" onclick="openModal('Captura de tela 2024-07-22 182208.png')" style="cursor: pointer;">
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="Captura de tela 2024-07-22 182220.png" class="img-fluid img-thumbnail" alt="Foto 3" onclick="openModal('Captura de tela 2024-07-22 182220.png')" style="cursor: pointer;">
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="Captura de tela 2024-07-22 182538.png" class="img-fluid img-thumbnail" alt="Foto 3" onclick="openModal('Captura de tela 2024-07-22 182538.png')" style="cursor: pointer;">
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="Captura de tela 2024-07-22 182610.png" class="img-fluid img-thumbnail" alt="Foto 3" onclick="openModal('Captura de tela 2024-07-22 182610.png')" style="cursor: pointer;">
+      </div><div class="col-md-4 mb-4">
+        <img src="Captura de tela 2024-07-22 182307.png" class="img-fluid img-thumbnail" alt="Foto 3" onclick="openModal('Captura de tela 2024-07-22 182307.png')" style="cursor: pointer;">
+      </div>
+    <!-- Adicione mais imagens conforme necessário -->
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
+
+<script src="scriptss.js"></script>
+</body>
+</html>
